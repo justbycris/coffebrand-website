@@ -35,7 +35,7 @@ header {
     min-width: 105px;
     max-width: 105px;
     height: auto;
-    top: -11px;
+    top: 0;
     float: left;
     margin-left: 20px;
     z-index: 9;
