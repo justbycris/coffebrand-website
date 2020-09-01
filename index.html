@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Coffee</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <link rel="stylesheet" type="text/css" href="CSS/lightbox.min.css">
+    <script src="JS/lightbox-plus-jquery.min.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js"></script>-->
+    <script src="main.js"></script>
 </head>
 
 <body>
@@ -34,22 +38,22 @@
     <div class="coffee" id="coffee">
         <div class="gallery">
             <div class="box">
-                <img src="images/coffeegrid3.jpg" alt="Coffe on table">
+                <a href="images/coffeegrid3.jpg" data-lightbox="mygallery" data-title="@HouseCoffee"><img src="images/coffeegrid3.jpg" alt="Coffe on table"></a>
             </div>
             <div class="box">
-                <img src="images/coffeegrid2.jpg" alt="Coffee set">
+                <a href="images/coffeegrid2.jpg" data-lightbox="mygallery" data-title="@HouseCoffee"><img src="images/coffeegrid2.jpg" alt="Coffee set"></a>
             </div>
             <div class="box">
-                <img src="images/coffeegrid1.jpg" alt="coffee mug">
+                <a href="images/coffeegrid1.jpg" data-lightbox="mygallery" data-title="@HouseCoffee"><img src="images/coffeegrid1.jpg" alt="coffee mug"></a>
             </div>
             <div class="box">
-                <img src="images/coffegrid.jpg" alt="Coffe">
+                <a href="images/coffegrid.jpg" data-lightbox="mygallery" data-title="@HouseCoffee"><img src="images/coffegrid.jpg" alt="Coffe"></a>
             </div>
             <div class="box">
-                <img src="images/coffeegrid5.jpg" alt="Coffe">
+                <a href="images/coffeegrid5.jpg" data-lightbox="mygallery" data-title="@HouseCoffee"><img src="images/coffeegrid5.jpg" alt="Coffe"></a>
             </div>
             <div class="box">
-                <img src="images/coffeegrid4.jpg" alt="Coffe">
+                <a href="images/coffeegrid4.jpg" data-lightbox="mygallery" data-title="@HouseCoffee"><img src="images/coffeegrid4.jpg" alt="Coffe"></a>
             </div>
         </div>
     </div>
@@ -58,7 +62,9 @@
         <p>Subscribe to our weekly newsletter and learn about coffee.</p>
         <div class="newsletter">
             <input type="text" class="input" placeholder="Enter Your Email">
-            <button>Submit</button>
+            <button type="submit" class="submit">
+                Submit
+            </button>
         </div>
     </div>
 </body>

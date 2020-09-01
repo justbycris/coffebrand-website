@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -11,28 +12,32 @@ html {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
     background-image: url(/images/cover.jpg);
     background-size: cover;
     background-attachment: fixed;
+    background-color: #EFD7BE;
+    width: 100vw;
+    line-height: 40px;
 }
 
 header {
     position: fixed;
-    display: inline-flex;
     width: 100vw;
     background-color: #ffffff;
     z-index: 10;
     height: auto;
     top: 0;
+    vertical-align: middle;
 }
 
 .logo {
     position: absolute;
-    max-width: 6rem;
+    min-width: 105px;
+    max-width: 105px;
+    height: auto;
+    top: -11px;
     float: left;
-    margin-left: 2rem;
+    margin-left: 20px;
     z-index: 9;
 }
 
@@ -41,19 +46,19 @@ nav {
     background-color: #ffffff;
     width: 100vw;
     text-align: right;
-    margin-right: 2rem;
+    margin-right: 20px;
     z-index: 8;
+    vertical-align: middle;
 }
 
 nav a {
-    font-family: 'Roboto', sans-serif;
+    font-size: calc(14px + .5vw);
     font-weight: 500;
-    display: inline-block;
-    padding: 2rem .6rem;
-    margin-bottom: .5rem;
+    display: inline-flex;
+    padding: 30px 10px;
     color: #1e1e1e;
     text-decoration: none;
-    margin-right: 1rem;
+    margin-right: 20px;
 }
 
 
@@ -67,17 +72,16 @@ nav a {
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 4rem;
+    font-size: calc(16px + 5vw);
     color: #1e1e1e;
     line-height: 60px;
 }
 
 h5 {
-    font-size: 1.5rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: calc(14px + 1vw);
     color: #1e1e1e;
     font-weight: 400;
+    margin-top: 20px;
 }
 
 
@@ -85,10 +89,11 @@ h5 {
 
 .about {
     position: absolute;
-    top: 800px;
+    top: 830px;
     background-image: url(/images/coffeebeans.jpg);
     background-size: cover;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 .container {
@@ -97,26 +102,25 @@ h5 {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    width: 70%;
+    width: 70vw;
     line-height: 30px;
     background-color: #2f3e46;
-    padding: 100px 50px;
+    padding: 65px 50px;
     border-radius: 15px;
 }
 
 h2 {
-    font-family: 'Roboto', sans-serif;
-    font-size: 3rem;
+    font-size: calc(16px + 3vw);
     font-weight: 600;
     color: #ffffff;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2rem;
+    font-size: calc(11px + 1vw);
     color: #ffffff;
     text-justify: inter-word;
+    line-height: 35px;
 }
 
 
@@ -142,9 +146,15 @@ p {
 }
 
 .box img {
+    transition: .5s;
     display: flex;
     width: 300px;
     height: 300px;
+}
+
+.box img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1);
 }
 
 
@@ -155,7 +165,8 @@ p {
     left: 50%;
     transform: translateX(-50%);
     top: 1610px;
-    width: 50%;
+    min-width: 70vw;
+    max-width: 400px;
     background-color: rgba(30, 30, 30, .95);
     text-align: center;
     padding: 2rem 3rem;
@@ -164,22 +175,22 @@ p {
 }
 
 .contact input {
-    width: 40%;
+    display: inline-flex;
+    min-width: 10vw;
     padding: 10px 10px;
     margin: 20px -5px;
     border-radius: 20px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
     border: none;
-    font-size: .9rem;
-    font-family: 'Roboto', sans-serif;
+    font-size: calc(14px + .3vw);
     cursor: text;
     outline: none;
 }
 
 button {
-    font-family: 'Roboto', sans-serif;
-    font-size: .9rem;
+    display: inline-flex;
+    font-size: calc(14px + .3vw);
     font-weight: 500;
     color: #ffffff;
     background-color: #18895E;
@@ -200,4 +211,16 @@ button:active {
     background-color: #0f583c;
     box-shadow: 0 2px #147952;
     transform: translateY(2px);
+}
+
+
+/*---------------------------------MEDIA QUERIES--------------------------*/
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+    .logo {
+        display: none;
+    }
+    .container {
+        padding: 40px 40px;
+    }
 }
